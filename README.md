@@ -1,6 +1,12 @@
 # Resilient Email Service
 
 A robust email sending service implemented in TypeScript that provides reliable email delivery with multiple fallback mechanisms and resilience patterns.
+ 
+# To run this 
+```bash
+npm install
+npm run dev
+```
 
 ## Features
 
@@ -62,6 +68,8 @@ The service can be configured with the following parameters:
 
 ```bash
 npm test
+npm install
+npm run dev
 ```
 
 ## License
