@@ -1,0 +1,33 @@
+{
+  "name": "resilient-email-service",
+  "version": "1.0.0",
+  "description": "A resilient email sending service with retry logic and fallback mechanisms",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:web": "tsc && webpack --mode production",
+    "dev": "cross-env PORT=3002 webpack serve --mode development",
+    "test": "jest",
+    "start": "node dist/index.js",
+    "start:web": "cross-env PORT=3002 webpack serve --mode production"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@types/uuid": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "jest": "^29.5.0",
+    "style-loader": "^3.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.0.4",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

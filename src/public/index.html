@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resilient Email Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resilient Email Service</h1>
+            <p>Send emails with automatic retry and fallback mechanisms</p>
+        </header>
+
+        <main>
+            <section class="email-form">
+                <h2>Send Email</h2>
+                <form id="emailForm">
+                    <div class="form-group">
+                        <label for="to">To:</label>
+                        <input type="email" id="to" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="body">Message:</label>
+                        <textarea id="body" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="idempotencyKey">Idempotency Key (optional):</label>
+                        <input type="text" id="idempotencyKey">
+                    </div>
+                    <button type="submit">Send Email</button>
+                </form>
+            </section>
+
+            <section class="status-section">
+                <h2>Email Status</h2>
+                <div id="statusList" class="status-list">
+                    <!-- Status items will be added here dynamically -->
+                </div>
+            </section>
+        </main>
+
+        <section class="stats-section">
+            <h2>Service Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Primary Provider</h3>
+                    <div id="primaryStats">
+                        <p>Status: <span id="primaryStatus">Active</span></p>
+                        <p>Success Rate: <span id="primarySuccessRate">0%</span></p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Secondary Provider</h3>
+                    <div id="secondaryStats">
+                        <p>Status: <span id="secondaryStatus">Active</span></p>
+                        <p>Success Rate: <span id="secondarySuccessRate">0%</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
